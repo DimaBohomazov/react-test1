@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde0a040-3d2a-488a-a03a-335f80571d94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MovieItem.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +13,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+      <selected-paths>
+        <path>
+          <id value="$PROJECT_DIR$/package.json" />
+          <id value="test" />
+        </path>
+      </selected-paths>
+    </layout>
   </component>
   <component name="ProjectId" id="1YwB36viJcwtsCBURNz4iMzsZeB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/[JavaScript]/Marafon/start" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:/Program Files (x86)/Yarn" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
@@ -59,37 +70,62 @@
       <option name="presentableId" value="Default" />
       <updated>1583843573361</updated>
       <workItem from="1583843577308" duration="1358000" />
-      <workItem from="1583845139181" duration="4233000" />
+      <workItem from="1583845139181" duration="5080000" />
+      <workItem from="1583856743460" duration="5809000" />
     </task>
+    <task id="LOCAL-00001" summary="render title">
+      <created>1583850446307</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583850446307</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="render title" />
+    <option name="LAST_COMMIT_MESSAGE" value="render title" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1583850412854">
+    <state x="306" y="0" key="CommitChangelistDialog2" timestamp="1583850444798">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583850412854" />
-    <state width="1344" height="169" key="GridCell.Tab.0.bottom" timestamp="1583846027546">
+    <state x="306" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583850444798" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1583869358629">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="169" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583846027546" />
-    <state width="1344" height="169" key="GridCell.Tab.0.center" timestamp="1583846027546">
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583869358629" />
+    <state width="1344" height="107" key="GridCell.Tab.0.bottom" timestamp="1583869364476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="169" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583846027546" />
-    <state width="1344" height="169" key="GridCell.Tab.0.left" timestamp="1583846027545">
+    <state width="1344" height="107" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583869364476" />
+    <state width="1344" height="107" key="GridCell.Tab.0.center" timestamp="1583869364476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="169" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583846027545" />
-    <state width="1344" height="169" key="GridCell.Tab.0.right" timestamp="1583846027546">
+    <state width="1344" height="107" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583869364476" />
+    <state width="1344" height="107" key="GridCell.Tab.0.left" timestamp="1583869364475">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="169" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583846027546" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1583844056051">
+    <state width="1344" height="107" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583869364475" />
+    <state width="1344" height="107" key="GridCell.Tab.0.right" timestamp="1583869364476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583844056051" />
+    <state width="1344" height="107" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583869364476" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1583857107099">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583857107099" />
+    <state x="490" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583850486071">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="490" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1583850486071" />
+    <state x="526" y="218" width="296" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1583856944184">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="526" y="218" width="296" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1366.728@0.0.1366.728" timestamp="1583856944184" />
   </component>
 </project>
