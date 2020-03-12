@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cde0a040-3d2a-488a-a03a-335f80571d94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +72,7 @@
       <workItem from="1583843577308" duration="1358000" />
       <workItem from="1583845139181" duration="5080000" />
       <workItem from="1583856743460" duration="5809000" />
+      <workItem from="1584000643595" duration="3062000" />
     </task>
     <task id="LOCAL-00001" summary="render title">
       <created>1583850446307</created>
@@ -89,7 +92,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
