@@ -2,6 +2,7 @@ import React from "react";
 // import { moviesData } from "../moviesData";
 import MovieItem from "./MovieItem";
 import {API_URL, API_KEY_3} from "../utils/api";
+import MovieTabs from "./MovieTabs";
 
 
 class App extends React.Component{
@@ -9,7 +10,8 @@ class App extends React.Component{
     super(props);
     this.state = {
       movies: [],
-      moviesWillWatch: []
+      moviesWillWatch: [],
+      sort_by: 'revenue.desc'
     };
     console.log('constructor')
   }
@@ -17,8 +19,8 @@ class App extends React.Component{
   componentDidMount() {
     console.log('didMount')
 
-    fetch(`${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=popularity.desc`).then((response) => {
-      console.log('then')
+    fetch(`${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${this.state.sort_by}`).then((response) => {
+      console.log('then');
       return response.json()
     }).then((data)=>{
       console.log('data', data);
@@ -28,6 +30,12 @@ class App extends React.Component{
     });
     console.log('after fetch')
   }
+
+  updateSortBy = value => {
+    this.setState({
+      sort_by: value
+    })
+  };
 
 
   addMovieToWillWatch = movie => {
@@ -69,6 +77,14 @@ class App extends React.Component{
         <div className="container">
           <div className="row">
             <div className="col-9">
+              <div className="row mb-4">
+                <div className="col-12">
+                  <MovieTabs
+                      sort_by = {this.state.sort_by}
+                      updateSortBy = {this.updateSortBy}
+                  />
+                </div>
+              </div>
               <div className="row">
               { this.state.movies.map( movie => {
                 return (
