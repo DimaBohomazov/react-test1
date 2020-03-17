@@ -11,25 +11,38 @@ class App extends React.Component{
     this.state = {
       movies: [],
       moviesWillWatch: [],
-      sort_by: 'revenue.desc'
+      sort_by: 'popularity.desc'
     };
     console.log('constructor')
-  }
+  };
 
   componentDidMount() {
-    console.log('didMount')
+    this.getMovies()
+  };
 
-    fetch(`${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${this.state.sort_by}`).then((response) => {
-      console.log('then');
-      return response.json()
-    }).then((data)=>{
-      console.log('data', data);
-      this.setState({
-        movies: data.results
-      })
-    });
-    console.log('after fetch')
-  }
+  componentDidUpdate(prevProps,prevState){
+    if(prevState.sort_by !== this.state.sort_by ){
+      console.log('call api');
+      this.getMovies()
+    }
+
+  };
+
+  getMovies = () => {
+    fetch(
+        `${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${
+            this.state.sort_by
+        }`
+    )
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+          this.setState({
+            movies: data.results
+          })
+        });
+};
 
   updateSortBy = value => {
     this.setState({
@@ -46,9 +59,9 @@ class App extends React.Component{
     this.setState({
       moviesWillWatch: updateMoviesWillWatch
     });
-    console.log(this.state.moviesWillWatch);
-    console.log(updateMoviesWillWatch);
-    console.log('---------------------------------------------------')
+    // console.log(this.state.moviesWillWatch);
+    // console.log(updateMoviesWillWatch);
+    // console.log('---------------------------------------------------')
   };
 
   removeMovie = movie => {
@@ -72,7 +85,7 @@ class App extends React.Component{
   };
 
   render() {
-    console.log('render');
+    console.log('render', this.state.sort_by);
     return(
         <div className="container">
           <div className="row">

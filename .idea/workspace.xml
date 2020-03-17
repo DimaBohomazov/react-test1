@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde0a040-3d2a-488a-a03a-335f80571d94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MovieTabs.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/stylesheets/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trainee/react-test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:/Program Files (x86)/Yarn" />
     <property name="settings.editor.selected.configurable" value="Console" />
@@ -90,7 +86,8 @@
       <workItem from="1583856743460" duration="5809000" />
       <workItem from="1584000643595" duration="3722000" />
       <workItem from="1584081080843" duration="7116000" />
-      <workItem from="1584293656680" duration="5263000" />
+      <workItem from="1584293656680" duration="6475000" />
+      <workItem from="1584472959002" duration="3071000" />
     </task>
     <task id="LOCAL-00001" summary="render title">
       <created>1583850446307</created>
@@ -113,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584089285349</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sort movies by navLink">
+      <created>1584300934602</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584300934602</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,13 +140,14 @@
     <MESSAGE value="render title" />
     <MESSAGE value="removeMovieFromWillWatch" />
     <MESSAGE value="GET movies from api.themoviedb.org" />
-    <option name="LAST_COMMIT_MESSAGE" value="GET movies from api.themoviedb.org" />
+    <MESSAGE value="sort movies by navLink" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort movies by navLink" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584089282108">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584300923105">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584089282108" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584300923105" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1584007724943">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -167,10 +172,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584084540297" />
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584089291805">
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584300938958">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584089291805" />
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584300938958" />
     <state x="490" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583850486071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
