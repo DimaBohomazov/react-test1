@@ -76,15 +76,28 @@ class App extends React.Component{
 
   addMovieToWillWatch = movie => {
     // this.state.moviesWillWatch.push(movie);
-
     const updateMoviesWillWatch = [...this.state.moviesWillWatch, movie]; // ES6 push method
     // updateMoviesWillWatch.push(movie);
     this.setState({
       moviesWillWatch: updateMoviesWillWatch
     });
-    // console.log(this.state.moviesWillWatch);
+
+    console.log("moviesWillWatch", this.state.moviesWillWatch);
+    console.log(this.state.moviesWillWatch.map(item => {
+      return item.title
+    }))
     // console.log(updateMoviesWillWatch);
     // console.log('---------------------------------------------------')
+  };
+
+  removeMovieFromWillWatch = movie => {
+    const updateMoviesWillWatch = this.state.moviesWillWatch.filter(function (item) {
+      return item.id !== movie.id;
+    });
+    this.setState({
+          moviesWillWatch: updateMoviesWillWatch
+        }
+    )
   };
 
   removeMovie = movie => {
@@ -97,20 +110,16 @@ class App extends React.Component{
     )
   };
 
-  removeMovieFromWillWatch = movie => {
-    const updateMoviesWillWatch = this.state.moviesWillWatch.filter(function (item) {
-      return item.id !== movie.id;
-    });
-    this.setState({
-      moviesWillWatch: updateMoviesWillWatch
-        }
-    )
-  };
+
 
   render() {
     console.log('render', this.state.sort_by);
     return(
         <div className="container">
+          <h1>
+            Movies master
+          </h1>
+          <p>All movies in one place.</p>
           <div className="row">
             <div className="col-9">
               <div className="row mt-2">
@@ -152,7 +161,18 @@ class App extends React.Component{
               </div>
             </div>
             <div className="col-3">
-              <p>Will watch: {this.state.moviesWillWatch.length}</p>
+              <div className="willWatch">
+                <h4>Will watch: {this.state.moviesWillWatch.length}</h4>
+                <div >
+                    {this.state.moviesWillWatch.map(item =>
+                      <div
+                          key={item.id} title={item.overview} className='moviesWillWatch'
+                            >
+                        {item.title}
+                      </div>)
+                    }
+                </div>
+              </div>
             </div>
           </div>
         </div>

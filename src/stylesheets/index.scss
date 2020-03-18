@@ -25,3 +25,13 @@ body {
     background-color: #007bff;
   }
 }
+.willWatch{
+  position: fixed;
+}
+.moviesWillWatch{
+  padding: 5px;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}

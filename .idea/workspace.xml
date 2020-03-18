@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cde0a040-3d2a-488a-a03a-335f80571d94" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieTabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieTabs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stylesheets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +90,8 @@
       <workItem from="1584000643595" duration="3722000" />
       <workItem from="1584081080843" duration="7116000" />
       <workItem from="1584293656680" duration="6475000" />
-      <workItem from="1584472959002" duration="19233000" />
+      <workItem from="1584472959002" duration="19310000" />
+      <workItem from="1584529796109" duration="10287000" />
     </task>
     <task id="LOCAL-00001" summary="render title">
       <created>1583850446307</created>
@@ -127,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584477508254</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pagination.jsx">
+      <created>1584493775456</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584493775457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,13 +160,14 @@
     <MESSAGE value="GET movies from api.themoviedb.org" />
     <MESSAGE value="sort movies by navLink" />
     <MESSAGE value="componentDidUpdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="componentDidUpdate" />
+    <MESSAGE value="Pagination.jsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination.jsx" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584477500510">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584493773125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584477500510" />
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584493773125" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1584483268431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -183,10 +192,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584084540297" />
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584477516015">
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584493780809">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584477516015" />
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584493780809" />
     <state x="490" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583850486071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

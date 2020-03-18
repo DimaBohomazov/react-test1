@@ -19,21 +19,21 @@ const MovieTabs = (props) =>{
                 <div className={getClassLink('popularity.desc')}
                      onClick={handleClick('popularity.desc')}
                 >
-                    Popularity desc
+                    Popularity
                 </div>
             </li>
             <li className="nav-item">
                 <div className={getClassLink('revenue.desc')}
                      onClick={handleClick('revenue.desc')}
                 >
-                    Revenue desc
+                    Revenue
                 </div>
             </li>
             <li className="nav-item">
                 <div className={getClassLink('vote_average.desc')}
                      onClick={handleClick('vote_average.desc')}
                 >
-                    Vote average desc
+                    Vote average
                 </div>
             </li>
         </ul>
