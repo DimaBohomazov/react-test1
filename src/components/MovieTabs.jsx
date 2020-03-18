@@ -1,9 +1,11 @@
 import React from "react";
 
 const MovieTabs = (props) =>{
-    const {sort_by, updateSortBy} = props;
+    const {sort_by, updateSortBy, updateTotalPages} = props;
     const handleClick = value => () => {
-            updateSortBy(value)
+        updateTotalPages(value)
+        updateSortBy(value);
+
     };
     const getClassLink = value => {
         return `nav-link ${
@@ -12,7 +14,7 @@ const MovieTabs = (props) =>{
     };
 
     return(
-        <ul className="tabs nav nav-pills">
+        <ul className="tabs nav nav-pills mt-3 mb-3">
             <li className="nav-item">
                 <div className={getClassLink('popularity.desc')}
                      onClick={handleClick('popularity.desc')}

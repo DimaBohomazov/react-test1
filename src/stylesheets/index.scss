@@ -9,3 +9,19 @@ body {
     color: #007bff;
   }
 }
+
+.pagination{
+  margin-bottom: 10px
+  }
+
+.pages{
+    border: 1px solid #cacaca;
+  &:hover {
+    color: #007bff;
+    background-color: #cacaca;
+  }
+  &.active{
+    color: white;
+    background-color: #007bff;
+  }
+}

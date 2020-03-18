@@ -3,6 +3,7 @@ import React from "react";
 import MovieItem from "./MovieItem";
 import {API_URL, API_KEY_3} from "../utils/api";
 import MovieTabs from "./MovieTabs";
+import Pagination from "./Pagination";
 
 
 class App extends React.Component{
@@ -11,7 +12,9 @@ class App extends React.Component{
     this.state = {
       movies: [],
       moviesWillWatch: [],
-      sort_by: 'popularity.desc'
+      sort_by: 'popularity.desc',
+      total_pages: 1,
+      page: 1
     };
     console.log('constructor')
   };
@@ -25,6 +28,9 @@ class App extends React.Component{
       console.log('call api');
       this.getMovies()
     }
+    if(prevState.page !== this.state.page){
+      this.getMovies()
+    }
 
   };
 
@@ -32,14 +38,18 @@ class App extends React.Component{
     fetch(
         `${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${
             this.state.sort_by
+        }&page=${
+          this.state.page
         }`
     )
         .then((response) => {
           return response.json()
         })
         .then((data) => {
+          console.log(data)
           this.setState({
-            movies: data.results
+            movies: data.results,
+            total_pages: data.total_pages
           })
         });
 };
@@ -48,6 +58,19 @@ class App extends React.Component{
     this.setState({
       sort_by: value
     })
+  };
+
+  updatePage = value => {
+    this.setState({
+      page: value
+    })
+  };
+
+  updateTotalPages = value => {
+    this.setState({
+      total_pages: value
+    })
+    console.log("this", this.total_pages)
   };
 
 
@@ -90,14 +113,22 @@ class App extends React.Component{
         <div className="container">
           <div className="row">
             <div className="col-9">
-              <div className="row mb-4">
+              <div className="row mt-2">
                 <div className="col-12">
                   <MovieTabs
                       sort_by = {this.state.sort_by}
                       updateSortBy = {this.updateSortBy}
+                      updateTotalPages = {this.updateTotalPages}
                   />
                 </div>
               </div>
+              {/*<div className='mt-3'>
+                <Pagination
+                    page = {this.state.page}
+                    updatePage = {this.updatePage}
+                    total_pages = {this.state.total_pages}
+                />
+              </div>*/}
               <div className="row">
               { this.state.movies.map( movie => {
                 return (
@@ -111,6 +142,13 @@ class App extends React.Component{
                 </div>
                 )
               })}
+              </div>
+              <div className=''>
+                <Pagination
+                    page = {this.state.page}
+                    updatePage = {this.updatePage}
+                    total_pages = {this.state.total_pages}
+                />
               </div>
             </div>
             <div className="col-3">
