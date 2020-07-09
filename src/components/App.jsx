@@ -1,183 +1,147 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 // import { moviesData } from "../moviesData";
 import MovieItem from "./MovieItem";
 import {API_URL, API_KEY_3} from "../utils/api";
 import MovieTabs from "./MovieTabs";
 import Pagination from "./Pagination";
 
-
-class App extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-      movies: [],
-      moviesWillWatch: [],
-      sort_by: 'popularity.desc',
-      total_pages: 1,
-      page: 1
-    };
-    console.log('constructor')
-  };
-
-  componentDidMount() {
-    this.getMovies()
-  };
-
-  componentDidUpdate(prevProps,prevState){
-    if(prevState.sort_by !== this.state.sort_by ){
-      console.log('call api');
-      this.getMovies()
-    }
-    if(prevState.page !== this.state.page){
-      this.getMovies()
-    }
-
-  };
-
-  getMovies = () => {
+const useMovies = () => {
+  const [movies, setMovies] = useState([])
+  const [totalPages, setTotalPages] = useState(1)
+  const getMovies = (sortBy, page) => {
     fetch(
-        `${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${
-            this.state.sort_by
-        }&page=${
-          this.state.page
-        }`
+      `${API_URL}/discover/movie?api_key=${API_KEY_3}&sort_by=${
+        sortBy
+      }&page=${
+        page
+      }`
     )
-        .then((response) => {
-          return response.json()
-        })
-        .then((data) => {
-          console.log(data)
-          this.setState({
-            movies: data.results,
-            total_pages: data.total_pages
-          })
-        });
-};
-
-  updateSortBy = value => {
-    this.setState({
-      sort_by: value
-    })
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setMovies(data.results)
+        setTotalPages(data.total_pages)
+      });
   };
-
-  updatePage = value => {
-    this.setState({
-      page: value
-    })
+  const removeMovie = movie => {
+    const updateMovies = movies.filter(item => item.id !== movie.id)
+    setMovies(updateMovies)
   };
-
-  updateTotalPages = value => {
-    this.setState({
-      total_pages: value
-    })
-    console.log("this", this.total_pages)
+  const updateTotalPages = value => {
+    setTotalPages(value)
   };
+  return {
+    movies,
+    totalPages,
+    getMovies,
+    removeMovie,
+    updateTotalPages
+  }
+}
 
-
-  addMovieToWillWatch = movie => {
+const useMoviesWillWatch = () => {
+  const [moviesWillWatch, setMoviesWillWatch] = useState([])
+  const addMovieToWillWatch = movie => {
     // this.state.moviesWillWatch.push(movie);
-    const updateMoviesWillWatch = [...this.state.moviesWillWatch, movie]; // ES6 push method
+    const updateMoviesWillWatch = [...moviesWillWatch, movie]; // ES6 push method
     // updateMoviesWillWatch.push(movie);
-    this.setState({
-      moviesWillWatch: updateMoviesWillWatch
-    });
-
-    console.log("moviesWillWatch", this.state.moviesWillWatch);
-    console.log(this.state.moviesWillWatch.map(item => {
-      return item.title
-    }))
-    // console.log(updateMoviesWillWatch);
-    // console.log('---------------------------------------------------')
+    setMoviesWillWatch(updateMoviesWillWatch)
   };
 
-  removeMovieFromWillWatch = movie => {
-    const updateMoviesWillWatch = this.state.moviesWillWatch.filter(function (item) {
-      return item.id !== movie.id;
-    });
-    this.setState({
-          moviesWillWatch: updateMoviesWillWatch
-        }
-    )
+  const removeMovieFromWillWatch = movie => {
+    const updateMoviesWillWatch = moviesWillWatch.filter(item => item.id !== movie.id)
+    setMoviesWillWatch(updateMoviesWillWatch)
+  };
+  return {
+    moviesWillWatch,
+    addMovieToWillWatch,
+    removeMovieFromWillWatch
+  }
+}
+
+const App = () => {
+  const {movies, totalPages, getMovies, removeMovie, updateTotalPages} = useMovies()
+  const {moviesWillWatch, addMovieToWillWatch, removeMovieFromWillWatch} = useMoviesWillWatch()
+  const [sortBy, setSortBy] = useState('popularity.desc')
+  const [page, setPage] = useState(1)
+
+  useEffect(() => {
+    getMovies(sortBy, page)
+  }, [sortBy, page])
+
+
+  const updateSortBy = value => {
+    setSortBy(value)
   };
 
-  removeMovie = movie => {
-    const updateMovies = this.state.movies.filter(function (item) {
-      return item.id !== movie.id;
-    });
-    this.setState({
-          movies: updateMovies
-        }
-    )
+  const updatePage = value => {
+    setPage(value)
   };
 
-
-
-  render() {
-    console.log('render', this.state.sort_by);
-    return(
-        <div className="container">
-          <h1>
-            Movies master
-          </h1>
-          <p>All movies in one place.</p>
-          <div className="row">
-            <div className="col-9">
-              <div className="row mt-2">
-                <div className="col-12">
-                  <MovieTabs
-                      sort_by = {this.state.sort_by}
-                      updateSortBy = {this.updateSortBy}
-                      updateTotalPages = {this.updateTotalPages}
-                  />
-                </div>
-              </div>
-              {/*<div className='mt-3'>
-                <Pagination
-                    page = {this.state.page}
-                    updatePage = {this.updatePage}
-                    total_pages = {this.state.total_pages}
-                />
-              </div>*/}
-              <div className="row">
-              { this.state.movies.map( movie => {
-                return (
-                <div className="col-6 mb-4" key={movie.id}>
-                   <MovieItem
-                      movie={movie}
-                      removeMovie={this.removeMovie}
-                      addMovieToWillWatch = {this.addMovieToWillWatch}
-                      removeMovieFromWillWatch = {this.removeMovieFromWillWatch}
-                  />
-                </div>
-                )
-              })}
-              </div>
-              <div className=''>
-                <Pagination
-                    page = {this.state.page}
-                    updatePage = {this.updatePage}
-                    total_pages = {this.state.total_pages}
+  return(
+      <div className="container">
+        <h1>
+          Movies master
+        </h1>
+        <p>All movies in one place.</p>
+        <div className="row">
+          <div className="col-9">
+            <div className="row mt-2">
+              <div className="col-12">
+                <MovieTabs
+                    sort_by = {sortBy}
+                    updateSortBy = {updateSortBy}
+                    updateTotalPages = {updateTotalPages}
                 />
               </div>
             </div>
-            <div className="col-3">
-              <div className="willWatch">
-                <h4>Will watch: {this.state.moviesWillWatch.length}</h4>
-                <div >
-                    {this.state.moviesWillWatch.map(item =>
-                      <div
-                          key={item.id} title={item.overview} className='moviesWillWatch'
-                            >
-                        {item.title}
-                      </div>)
-                    }
-                </div>
+            {/*<div className='mt-3'>
+              <Pagination
+                  page = {this.state.page}
+                  updatePage = {this.updatePage}
+                  total_pages = {this.state.total_pages}
+              />
+            </div>*/}
+            <div className="row">
+            { movies.map( movie => {
+              return (
+              <div className="col-6 mb-4" key={movie.id}>
+                 <MovieItem
+                    movie={movie}
+                    removeMovie={removeMovie}
+                    addMovieToWillWatch = {addMovieToWillWatch}
+                    removeMovieFromWillWatch = {removeMovieFromWillWatch}
+                />
+              </div>
+              )
+            })}
+            </div>
+            <div className=''>
+              <Pagination
+                  page = {page}
+                  updatePage = {updatePage}
+                  total_pages = {totalPages}
+              />
+            </div>
+          </div>
+          <div className="col-3">
+            <div className="willWatch">
+              <h4>Will watch: {moviesWillWatch.length}</h4>
+              <div >
+                  {moviesWillWatch.map(item =>
+                    <div
+                        key={item.id} title={item.overview} className='moviesWillWatch'
+                          >
+                      {item.title}
+                    </div>)
+                  }
               </div>
             </div>
           </div>
         </div>
-    );
-  }
+      </div>
+  );
 }
 /*
 function App() {

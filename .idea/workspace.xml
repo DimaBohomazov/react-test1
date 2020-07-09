@@ -4,9 +4,7 @@
     <list default="true" id="cde0a040-3d2a-488a-a03a-335f80571d94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieTabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieTabs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stylesheets/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/stylesheets/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieItem.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
@@ -45,14 +44,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/[JavaScript]/Marafon/start/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:/Program Files (x86)/Yarn" />
     <property name="settings.editor.selected.configurable" value="Console" />
@@ -91,7 +90,19 @@
       <workItem from="1584081080843" duration="7116000" />
       <workItem from="1584293656680" duration="6475000" />
       <workItem from="1584472959002" duration="19310000" />
-      <workItem from="1584529796109" duration="10287000" />
+      <workItem from="1584529796109" duration="12795000" />
+      <workItem from="1584552375524" duration="690000" />
+      <workItem from="1584568734281" duration="729000" />
+      <workItem from="1584795210967" duration="19756000" />
+      <workItem from="1584877703415" duration="9526000" />
+      <workItem from="1585057958415" duration="5467000" />
+      <workItem from="1585074507816" duration="1219000" />
+      <workItem from="1585149609220" duration="4041000" />
+      <workItem from="1585161706454" duration="885000" />
+      <workItem from="1585176252983" duration="236000" />
+      <workItem from="1585231050921" duration="1638000" />
+      <workItem from="1585594980807" duration="2712000" />
+      <workItem from="1594231271093" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="render title">
       <created>1583850446307</created>
@@ -135,24 +146,30 @@
       <option name="project" value="LOCAL" />
       <updated>1584493775457</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="making willWatch">
+      <created>1584545901776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584545901776</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="render title" />
@@ -161,17 +178,18 @@
     <MESSAGE value="sort movies by navLink" />
     <MESSAGE value="componentDidUpdate" />
     <MESSAGE value="Pagination.jsx" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pagination.jsx" />
+    <MESSAGE value="making willWatch" />
+    <option name="LAST_COMMIT_MESSAGE" value="making willWatch" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584493773125">
+    <state x="350" y="0" key="CommitChangelistDialog2" timestamp="1584545895333">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584493773125" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1584483268431">
+    <state x="350" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584545895333" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1585232728463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584483268431" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585232728463" />
     <state width="1344" height="107" key="GridCell.Tab.0.bottom" timestamp="1583869364476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -188,14 +206,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1344" height="107" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583869364476" />
+    <state x="487" y="50" key="RollbackChangesDialog" timestamp="1584547403297">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="487" y="50" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584547403297" />
     <state x="184" y="0" key="SettingsEditor" timestamp="1584084540297">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584084540297" />
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584493780809">
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2" timestamp="1584545907551">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584493780809" />
+    <state x="275" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584545907551" />
     <state x="490" y="274" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583850486071">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
